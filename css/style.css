@@ -1,0 +1,53 @@
+
+body,html{
+    margin: 0;
+    height: 100%;
+}
+main{
+    display: flex;
+    border: 1px solid;
+    
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h3{
+    font-size: 2vw;
+}
+
+article {
+    margin: 5%;
+    border: 1px solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+article div{
+    display: flex;
+    border-left: 1px solid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+img {
+    max-width: 30%;
+    height: auto;
+}
+footer{
+    position: static;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+
+}
+footer p{
+    color: white;
+    opacity: 0.5;
+    height: 100;
+}

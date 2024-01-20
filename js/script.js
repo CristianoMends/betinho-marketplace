@@ -1,13 +1,14 @@
+const products = [
+    { id: 'chumbinho', image: 'img/products/chumbinho.jpeg', name: 'Chumbinho para Carabina de pressão', description: 'Chumbinho 5.5mm Espingarda De Pressão Carabina', price: '15,00' },
+    { id: 'carburador', image: 'img/products/carburador.jpeg', name: 'Carburador para motoserra', description: 'Carburador para motoserra Ms 170 Ms 180', price: '150,00' },
+    { id: 'esticador', image: 'img/products/esticador.jpeg', name: 'Esticador para corrente', description: 'Esticador para corrente de motoserra', price: '25,00' },
+    { id: 'sabre', image: 'img/products/sabre.webp', name: 'Sabre de motoserra', description: 'sabre para motoserra rossel Ms 170', price: '95,00' },
+    { id: 'lima', image: 'img/products/lima.webp', name: 'Lima Para Motosserra', description: 'Lima Para Amolar Afiar Motosserra Ms 170', price: '12,00' }
+];
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Simulação de dados do catálogo
-    const products = [
-        { id: 'chumbinho', image: 'img/products/chumbinho.jpeg', name: 'Chumbinho para Carabina de pressão', description: 'Chumbinho 5.5mm Espingarda De Pressão Carabina', price: '15,00' },
-        { id: 'carburador', image: 'img/products/carburador.jpeg', name: 'Carburador para motoserra', description: 'Carburador para motoserra Ms 170 Ms 180', price: '150,00' },
-        { id: 'esticador', image: 'img/products/esticador.jpeg', name: 'Esticador para corrente', description: 'Esticador para corrente de motoserra', price: '25,00' },
-        { id: 'sabre', image: 'img/products/sabre.webp', name: 'Sabre de motoserra', description: 'sabre para motoserra rossel Ms 170', price: '95,00' },
-        { id: 'lima', image: 'img/products/lima.webp', name: 'Lima Para Motosserra', description: 'Lima Para Amolar Afiar Motosserra Ms 170', price: '12,00' }
-    ];
+    
+   
 
     const productSection = document.getElementById('productSection');
 
@@ -34,15 +35,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const button = document.createElement('button');
         button.textContent = 'Consultar o Vendedor';
         button.addEventListener('click',function(){
+
             var numeroTelefone = "558894748694";
-
             var mensagemPredefinida = "Olá, gostaria de mais informações sobre o produto: " + product.name;
-
             var mensagemCodificada = encodeURIComponent(mensagemPredefinida);
+            var linkWhatsApp = "https://wa.me/" + numeroTelefone + "?text=" + mensagemCodificada;
 
-            var linkWhatsAppWeb = "https://web.whatsapp.com/send?phone=" + numeroTelefone + "&text=" + mensagemCodificada;
-
-            window.open(linkWhatsAppWeb, '_blank');
+            window.open(linkWhatsApp, '_blank');
         })
 
         productInfo.appendChild(h2);
@@ -70,3 +69,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }, 3000);
 });
+
+function search(){
+    const dadosString = document.getElementById('input').value.toString();
+    for(const p of products){
+        if (p.description.toLowerCase().includes(dadosString.toLowerCase()) && dadosString != '' && dadosString != ' ') {
+            document.getElementById(p.id).scrollIntoView({ behavior: 'smooth' });
+            break;            
+        } else {
+            
+        }
+    }
+}
+const input = document.getElementById('input');
+input.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        search()
+    }
+});
+
+const btnToHome = document.getElementById('toHome');
+btnToHome.addEventListener('click',function(){
+    document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+})
+

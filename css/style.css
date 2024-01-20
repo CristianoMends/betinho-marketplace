@@ -21,7 +21,7 @@ button:hover{
 }
 p,h1,h2,h3{
     text-align: center;
-    font-family: cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 header{
     display: flex;
@@ -43,13 +43,26 @@ header h1{
 }
 .galeria {
     display: flex;
-    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-out;
     height: 30vw;
 }
 .galeria img{
     width: 100%;
 }
+.search{
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.search input{
+    width: 50%;
+    border-radius: 5px 0 0 5px;
 
+}
+.search button{
+    border-radius: 0 5px 5px 0;
+}
 article {
     max-width: 400px;
     background-color: white;
@@ -72,6 +85,7 @@ article div{
 }
 article div h3,p{
     font-size: 3vw;
+    width: 100%;
 }
 .price{
     font-size: 3vw;
@@ -85,8 +99,13 @@ article img {
     max-width: 30%;
     max-height: 300px; 
     height: auto;
-    margin: 5%;
+    margin: 10%;
     background-color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+article img:hover {
+    transform: scale(1.5); /* Ajuste o fator de escala conforme necessário */
 }
 footer p{
     font-family: 'Times New Roman', Times, serif;
@@ -118,6 +137,7 @@ footer .dev{
 
 footer .dev p{
     font-size: small;
+    color: #7e7c78;
     opacity: 0.5;
 }
 .contacts a {

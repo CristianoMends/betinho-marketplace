@@ -2,9 +2,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Simulação de dados do catálogo
     const products = [
-        { id: 'chumbinho', image: 'img/chumbinho.jpeg', name: 'Chumbinho para Carabina de pressão', description: 'Chumbinho 5.5mm Espingarda De Pressão Carabina', price: '15,00' },
-        { id: 'carburador', image: 'img/carburador.jpeg', name: 'Carburador para motoserra', description: 'Carburador para motoserra Ms 170 Ms 180', price: '150,00' },
-        { id: 'esticador', image: 'img/esticador.jpeg', name: 'Esticador para corrente', description: 'Esticador para corrente de motoserra', price: '25,00' }
+        { id: 'chumbinho', image: 'img/products/chumbinho.jpeg', name: 'Chumbinho para Carabina de pressão', description: 'Chumbinho 5.5mm Espingarda De Pressão Carabina', price: '15,00' },
+        { id: 'carburador', image: 'img/products/carburador.jpeg', name: 'Carburador para motoserra', description: 'Carburador para motoserra Ms 170 Ms 180', price: '150,00' },
+        { id: 'esticador', image: 'img/products/esticador.jpeg', name: 'Esticador para corrente', description: 'Esticador para corrente de motoserra', price: '25,00' },
+        { id: 'sabre', image: 'img/products/sabre.webp', name: 'Sabre de motoserra', description: 'sabre para motoserra rossel Ms 170', price: '95,00' },
+        { id: 'lima', image: 'img/products/lima.webp', name: 'Lima Para Motosserra', description: 'Lima Para Amolar Afiar Motosserra Ms 170', price: '12,00' }
     ];
 
     const productSection = document.getElementById('productSection');

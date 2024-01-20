@@ -3,23 +3,34 @@ body,html{
     margin: 0;
     height: 100%;
     overflow-x: hidden;
-    background-color: #302c25;
+    background-color: #34344e;
 }
 main{
     display: flex;
     flex-direction: column;
+    align-items: center;
     border: 1px solid;
-    background-color:#f3c15e;    
+    background-color:#566981;    
+}
+button{
+    background-color: #abd1de;
+}
+button:hover{
+    background-color: #14141f;
+    color: white;
 }
 p,h1,h2,h3{
+    text-align: center;
     font-family: cursive;
 }
 header{
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #302c25;
-    height: 100px;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    background-color: #14141f;
+    height: 45vw;
     
 }
 header h1{
@@ -27,26 +38,30 @@ header h1{
     white-space: nowrap;
     font-size: 3.5vw;
     overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
     text-overflow: ellipsis;
 }
 .galeria {
     display: flex;
     transition: transform 1s ease-in-out;
+    height: 30vw;
 }
 .galeria img{
     width: 100%;
 }
 
 article {
+    max-width: 400px;
     background-color: white;
     margin: 5%;
     border: 1px solid;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     width: 90%;
+    height: auto;
 }
 article div{
     display: flex;
@@ -55,11 +70,11 @@ article div{
     justify-content: center;
     padding: 5%;
 }
-article div h3{
-    position: relative;
-    font-size: 1em;
+article div h3,p{
+    font-size: 3vw;
 }
 .price{
+    font-size: 3vw;
     font-weight:normal;
     font-size: x-large;
     color: green;
@@ -94,17 +109,15 @@ footer .loja i{
 }
 
 footer .dev{  
-    background-color: #302c25;
+    background-color: #14141f;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5%;
 }
-footer .dev button{
-    background-color: unset;
-}
 
 footer .dev p{
+    font-size: small;
     opacity: 0.5;
 }
 .contacts a {

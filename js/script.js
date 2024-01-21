@@ -1,9 +1,37 @@
 const products = [
-    { id: 'chumbinho', image: 'img/products/chumbinho.jpeg', name: 'Chumbinho para Carabina de pressão', description: 'Chumbinho 5.5mm Espingarda De Pressão Carabina', price: '15,00' },
-    { id: 'carburador', image: 'img/products/carburador.jpeg', name: 'Carburador para motoserra', description: 'Carburador para motoserra Ms 170 Ms 180', price: '150,00' },
-    { id: 'esticador', image: 'img/products/estic.jpeg', name: 'Esticador para corrente', description: 'Esticador para corrente de motoserra', price: '25,00' },
-    { id: 'sabre', image: 'img/products/sabre.webp', name: 'Sabre de motoserra', description: 'sabre para motoserra rossel Ms 170', price: '95,00' },
-    { id: 'lima', image: 'img/products/lima.webp', name: 'Lima Para Motosserra', description: 'Lima Para Amolar Afiar Motosserra Ms 170', price: '12,00' }
+    {   id: 'chumbinho',
+        image: 'img/products/chumbinho.jpeg',
+        description: 'Chumbinho 5.5mm Espingarda De Pressão Carabina',
+        price: 15.00,
+        card: 1
+    },
+    {   id: 'carburador',
+        image: 'img/products/carburador.jpeg',
+        description: 'Carburador para motoserra Ms 170 Ms 180',
+        price: 150.00,
+        card: 1
+    },
+    {   id: 'esticador',
+        image: 'img/products/estic.jpeg',
+        description: 'Esticador para corrente de motoserra',
+        price: 25.00,
+        card: 1
+
+    },
+    {   id: 'sabre',
+        image: 'img/products/sabre.webp', 
+        description: 'sabre para motoserra rossel Ms 170',
+        price: 95.00,
+        card: 1
+
+    },
+    {   id: 'lima',
+        image: 'img/products/lima.webp',
+        description: 'Lima Para Amolar Afiar Motosserra Ms 170',
+        price: 12.00,
+        card: 1
+
+    }
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -22,15 +50,17 @@ document.addEventListener('DOMContentLoaded', function () {
         img.alt = product.name;
 
         const productInfo = document.createElement('div');
-        const h2 = document.createElement('h3');
-        h2.textContent = product.name;
+        
+        const h2 = document.createElement('h4');
+        h2.className = 'card';
+        h2.innerHTML = `<i class="fa-regular fa-credit-card"></i> ${product.card}x R$ ${(product.price/product.card).toFixed(2).replace('.',',')} no Cartão`;
 
         const description = document.createElement('p');
         description.textContent = product.description;
 
         const price = document.createElement('p');
         price.className = 'price';
-        price.textContent = `R$: ${product.price}`;
+        price.innerHTML = `<span style="font-size: small;">R$:</span> ${product.price.toFixed(2).replace('.',',')}`;
 
         const button = document.createElement('button');
         button.textContent = 'Consultar o Vendedor';
@@ -44,9 +74,9 @@ document.addEventListener('DOMContentLoaded', function () {
             window.open(linkWhatsApp, '_blank');
         })
 
-        productInfo.appendChild(h2);
-        productInfo.appendChild(price);
         productInfo.appendChild(description);
+        productInfo.appendChild(price);
+        productInfo.appendChild(h2);
         productInfo.appendChild(button);
 
         article.appendChild(img);

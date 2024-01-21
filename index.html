@@ -11,24 +11,26 @@
 <body>
 
     <header>
-        <h1>Catálogo de Produtos</h1>
+        <section class="search">
+            <input type="text" id="input" maxlength="20" placeholder="Busque na loja">
+            <button id="btnSearch" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </section>        
+    </header>
+    <main>
         <section class="galeria">
             <img src="img/ferramentas2.jpg" alt="Imagem 1">
             <img src="img/ferramentas3.jpg" alt="Imagem 2">
             <img src="img/ferramentas.jpg" alt="Imagem 3">
-        </section>
-    </header>
-    <main>
-        <section class="search">
-            <input type="text" id="input" maxlength="20" onclick="">
-            <button id="btnSearch" onclick="search()">Pesquisar</button>
+            <div class="img"></div>
         </section>
         
         <section id="productSection"></section>
         <nav>
             <button id="toHome">Voltar ao topo</button>
-        </nav>  
-    </main>
+        </nav>
+        
+        <section></section>
+    </main>    
     
     <footer>
         <section class="loja">

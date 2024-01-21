@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const img = document.createElement('img');
         img.src = product.image;
-        img.alt = product.name;
+        img.alt = product.description;
 
         const productInfo = document.createElement('div');
         

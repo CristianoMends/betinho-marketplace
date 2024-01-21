@@ -57,29 +57,25 @@ header h1{
     width: 100%;
 }
 .search{
-    padding: 10px;
-    margin: 15px;
-    height: 15%;
-    width: 100%;
+    /*padding: 10px;*/
     display: flex;
-    align-items: center;
+    width: 100%;
     justify-content: center;
-    max-width: 450px;
 }
 .search input{
     width: 50%;
-    max-width: 350px;
-    border-radius: 5px 5px 5px 5px;
+    max-width: 400px;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid white;
     color: white;
     background-color: #14141f;
 }
 .search button{
     position: relative;
-    left: -7%;
-    background-color: unset;
-    color: white;
+    background-color: #14141f;
+    border: 1px solid white;
     border-radius: 0 5px 5px 0;
-    border: none;
+    color: white;
 }
 article {
     max-width: 400px;
@@ -132,12 +128,15 @@ article img {
 article img:hover {
     transform: scale(1.5); /* Ajuste o fator de escala conforme necessário */
 }
+img:hover + #enlarged {
+    opacity: 1;
+}
 #toHome{
     width: auto;
     margin-bottom: 20px;
 }
 footer{
-    height: 50%;
+    height: 25%;
 }
 
 footer p{
@@ -157,12 +156,8 @@ footer .loja{
 }
 footer .loja i{    
     color: #fff;
-    font-size: 2vw;
+    font-size: small;
     text-decoration: none;
-}
-footer .loja a{
-    text-decoration: none;
-    color: white;
 }
 
 footer .dev{
@@ -173,6 +168,7 @@ footer .dev{
     align-items: center;
     justify-content: end;
     padding: 5%;
+    border-top: 1px solid white;
 }
 
 footer .dev p{
@@ -182,7 +178,6 @@ footer .dev p{
 }
 .contacts a {
     color: #fff;
-    font-size: 24px;
     margin: 0 10px;
     text-decoration: none;
 }

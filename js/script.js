@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click',function(){
 
             var numeroTelefone = "558894748694";
-            var mensagemPredefinida = "Olá, gostaria de mais informações sobre o produto: " + product.name;
+            var mensagemPredefinida = "Olá, gostaria de mais informações sobre o produto: " + product.description;
             var mensagemCodificada = encodeURIComponent(mensagemPredefinida);
             var linkWhatsApp = "https://wa.me/" + numeroTelefone + "?text=" + mensagemCodificada;
 
